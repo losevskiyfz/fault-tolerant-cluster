@@ -19,16 +19,16 @@
 
 ## 3)Сравнение двух вариантов
 
-| Feature                   | Master-Slave Replication                    | Master-Master Replication                                     |
-|---------------------------|---------------------------------------------|---------------------------------------------------------------|
-| **Write Operations**      | Only on the master                          | On any master                                                 |
-| **Read Operations**       | On slaves                                   | On any master                                                 |
-| **Replication Direction** | One-way                                     | Two-way                                                       |
-| **Conflict Handling**     | None                                        | Required for write conflicts                                  |
-| **Scalability**           | Read scalability only                       | Write and read scalability                                    |
-| **Failover Complexity**   | Difficulties with proper promotion of slave | Easy automatic failover possible                              |
-| **Consistency (Latency)** | Generally consistent, with lag              | Potential consistency issues, resolved by conflict resolution |
-| **Complexity**            | Simpler to set up and manage                | More complex due to conflict resolution and synchronization   |
+| Feature                   | Master-Slave Replication                    | Master-Master Replication                                                 |
+|---------------------------|---------------------------------------------|---------------------------------------------------------------------------|
+| **Write Operations**      | Only on the master                          | On any master                                                             |
+| **Read Operations**       | On slaves                                   | On any master                                                             |
+| **Replication Direction** | One-way                                     | Two-way                                                                   |
+| **Conflict Handling**     | None                                        | Required for write conflicts                                              |
+| **Scalability**           | Read scalability only                       | Write and read scalability                                                |
+| **Failover Complexity**   | Difficulties with proper promotion of slave | Easy automatic failover possible                                          |
+| **Consistency (Latency)** | Generally consistent, with lag              | Very hard to maintain consistency issues, resolved by conflict resolution |
+| **Complexity**            | Simpler to set up and manage                | More complex due to conflict resolution and synchronization               |
 
 ## 4)Synchronous vs Asynchronous реплицирование
 

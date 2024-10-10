@@ -2,14 +2,16 @@
 
 ## 1)Master-Slave схема
 
-![Master-Slave Architecture](./figures/master-slave-architecture.png)
+<img src="./figures/master-slave-architecture.png" alt="Master-Slave Architecture" width="400"/>
+
 *Figure 1: Master-Slave Architecture*
 
 Главный узел обрабатывает операции записи, а вторые узлы реплицируют данные для операций чтения.
 
 ## 2)Master-Master схема
 
-![Master-Slave Architecture](./figures/master-master-architecture.png)
+<img src="./figures/master-master-architecture.png" alt="Master-Master Architecture" width="400"/>
+
 *Figure 2: Master-Master Architecture*
 
 Все узлы действуют как главные базы данных, позволяя выполнять чтение и запись на любом узле, которые затем копируются
@@ -44,7 +46,8 @@
 Хорошее
 объяснение: [https://aws.amazon.com/what-is/database-sharding/](https://aws.amazon.com/what-is/database-sharding/)
 
-![Master-Slave Architecture](./figures/sharding.png)
+<img src="./figures/sharding.png" alt="Sharding" width="400"/>
+
 *Figure 3: Sharding*
 
 ### Виды шардинга

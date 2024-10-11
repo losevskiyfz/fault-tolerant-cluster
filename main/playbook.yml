@@ -1,0 +1,6 @@
+---
+- name: PostgreSQL Cluster Deployment
+  hosts: all
+  become: yes
+  roles:
+    - postgresql

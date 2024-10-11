@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  master:
+    image: postgres:13
+    environment:
+      POSTGRES_PASSWORD: my_secure_password
+    ports:
+      - "5432:5432"
+
+  slave:
+    image: postgres:13
+    environment:
+      POSTGRES_PASSWORD: my_secure_password
+    ports:
+      - "5433:5432"

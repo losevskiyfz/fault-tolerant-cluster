@@ -1,0 +1,21 @@
+---
+- name: Stop PostgreSQL
+  service:
+    name: postgresql
+    state: stopped
+
+- name: Remove existing data directory
+  file:
+    path: /var/lib/postgresql/13/main
+    state: absent
+
+- name: Set up replication from master
+  shell: |
+    pg_basebackup -h {{ master_ip }} -D /var/lib/postgresql/13/main -U replicator -v -P --wal-method=stream
+  args:
+    creates: /var/lib/postgresql/13/main/recovery.conf
+
+- name: Start PostgreSQL
+  service:
+    name: postgresql
+    state: started

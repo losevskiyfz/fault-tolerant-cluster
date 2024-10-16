@@ -13,7 +13,7 @@ CREATE TABLE measurement (
     object_id uuid NOT NULL,
     system_id int8 NOT NULL,
     meas_val numeric(38, 18) NOT null
-);
+) PARTITION BY RANGE (meas_ts);
 CREATE INDEX idx_measurement_object ON measurement USING btree (object_id);
 CREATE INDEX idx_measurement_object_type ON measurement USING btree (object_type_id);
 CREATE INDEX idx_measurement_param ON measurement USING btree (param_id);

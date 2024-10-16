@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   postgres:
-    image: postgres:16.4
+    image: citusdata/citus:latest
     container_name: postgres_time_series_test
     environment:
       POSTGRES_USER: postgres

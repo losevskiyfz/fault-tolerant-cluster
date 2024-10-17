@@ -2,12 +2,12 @@ version: '3.8'
 
 services:
   postgres:
-    image: mes_citus
-    container_name: mes_telemetry
+    image: citus_with_extensions:12.1
+    container_name: time_series_test
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: mes_telemetry
+      POSTGRES_DB: time_series_test
     ports:
       - "5432:5432"
     volumes:
